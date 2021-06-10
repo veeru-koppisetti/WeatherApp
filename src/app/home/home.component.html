@@ -1,0 +1,22 @@
+
+<div class="container">
+  <div class="row">
+     <h3 class="text-center my-4">Weather Details</h3>
+     <div class="col-md-4 main_blk" *ngFor="let location of cityData">
+        <div>
+           <p class="text-center loctn_name">
+              <a routerLink="cityDetail/{{location.name}}">{{location.name}}</a> 
+           </p>
+           <p class="text-center">
+              Temperature in Degrees: {{location.main.temp}}
+           </p>
+           <p class="text-center">
+              Sunrise: {{moment(location.sys.sunrise).utc().format('YYYY-MM-DD, h:mm:ss')}}
+           </p>
+           <p class="text-center">
+              Sunset: {{moment(location.sys.sunset).utc().format('YYYY-MM-DD, h:mm:ss')}}
+           </p>
+        </div>
+     </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+       <h3 class="text-center my-4">{{city}} Details</h3>
+       <table class="col-md-4 main_blk table table-hover" >
+          <thead>
+             <tr>
+                <th>Date</th>
+                <th>Temparature in Deg</th>
+                <th>Sea Level</th>
+             </tr>
+          </thead>
+          <tr *ngFor="let location of weatherDetails">
+             <td>
+                {{location.date}}
+             </td>
+             <td>
+                {{location.temp}}
+             </td>
+             <td>
+                {{location.sea_level}}
+             </td>
+          </tr>
+       </table>
+    </div>
+ </div>
